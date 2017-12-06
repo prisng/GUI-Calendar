@@ -44,13 +44,7 @@ public class CalendarModel {
 	private static final String EVENTFILE = "events.txt";
 	
 	/**
-	 * A calendar model that holds events using a tree map with a Date object as the key and
-	 * an array list of events as the value. Functionalities include the creation and deletion
-	 * of events, viewing of events on specific dates, listing of all events of the calendar,
-	 * and the loading/creation of an events.txt file that holds a list of all events.
-	 * 
-	 * @author 		Priscilla Ng
-	 * 
+	 * Constructs a calendar model.
 	 */
 	public CalendarModel() {
 		this.dateToEvents = new TreeMap<String, ArrayList<Event>>();
