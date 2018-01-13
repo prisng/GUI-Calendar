@@ -337,10 +337,6 @@ public class CalendarModel {
 	 * Exits the calendar application and saves all created events into events.txt.
 	 */
 	public void quit() {
-		// Formatting date
-		String pattern = "MM/dd/yyyy";
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-		
 		// BufferedWriter used to write content of event map into text file
 		BufferedWriter writer = null;
 		
@@ -349,7 +345,6 @@ public class CalendarModel {
 		    
 		    if (!dateToEvents.isEmpty()) {
 				for (Map.Entry<String, ArrayList<Event>> entry : dateToEvents.entrySet()) {
-					String key = entry.getKey();
 					ArrayList<Event> eventList = entry.getValue();
 					for (int i = 0; i < eventList.size(); i++) {
 						writer.write(eventList.get(i).printEvent() + "\n");
@@ -359,8 +354,7 @@ public class CalendarModel {
 		    
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			try {
 				if (writer != null) {
 					writer.close();

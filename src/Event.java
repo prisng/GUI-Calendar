@@ -2,7 +2,6 @@
  * A class that represents a single calendar event.
  * 
  * @author 		Priscilla Ng
- * @version		1.0
  * 
  */
 public class Event {
