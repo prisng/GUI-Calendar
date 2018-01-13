@@ -193,8 +193,10 @@ public class CalendarView implements ChangeListener {
 			JButton dayButton = new JButton(Integer.toString(i + 1) + " ");
 
 			// Look of button
-			dayButton.setHorizontalAlignment(SwingConstants.TRAILING);	// aligns # slightly right
+			dayButton.setHorizontalAlignment(SwingConstants.LEFT);	// align number top left
+			dayButton.setVerticalAlignment(SwingConstants.TOP);
 			dayButton.setPreferredSize(d);
+			dayButton.setFont(new Font("Helvetica", Font.PLAIN, 12));
 			dayButton.setOpaque(true);
 			dayButton.setBackground(Color.WHITE);
 			dayButton.setBorder(BorderFactory.createRaisedBevelBorder());
